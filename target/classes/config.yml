@@ -1,0 +1,115 @@
+# Плагин разработал разработчик NormalWalk_
+# Версия плагина 1.12.2-1.21x
+#
+# Плагин имеет поддержку HEX и градиента
+# Если Вы нашли ошибку, свяжитесь со мной:
+#
+# Вконтакте - vk.com/normalwalk
+# Телеграм - t.me/normalwalk
+#
+# Для перезагрузки конфига используйте команду /normaloresearn reload
+# Перм - normaloresearn.reload
+#
+# Приятного пользования!
+
+# Настройка функций
+Settings:
+  message: true # Отправлять ли сообщение в чат при добыче руды? (=true да \ =false нет)
+  actionbar: true # Показывать ли в ActionBar сообщение при добыче руды? (=true да \ =false нет)
+  round-money: false # Округлять ли деньги? Если стоит =true, то если с руды выпадет 10,3 монетки, то игрок получит 10. А если стоит =false, то игрок получит 10,3, без округлений.
+  sound: false # Воспроизводить ли звук при добыче руд?
+
+# Сообщение о добыче руды (работает только если =true в Settings)
+# {earn} - кол-во денег за добычу
+# {ore} - имя руды, которое вы указали в "ores"
+# Сообщение так же можно сделать и в столбик
+# - ""
+# - "&fВы заработали &a${earn}"
+# - "&f За добычу &a{ore}"
+# - ""
+earn-message: "&6&lСЕРВЕР: &fВы заработали &a${earn}&f за добычу &e{ore}"
+
+# Сообщение в action-bar (работает только если =true в Settings)
+# {earn} - кол-во денег за добычу
+# {ore} - имя руды, которое вы указали в "ores"
+earn-actionbar: "&a+${earn} &fза добычу &e{ore}"
+
+# Звук при добыче руды
+Sound:
+  name: "ENTITY_EXPERIENCE_ORB_PICKUP" # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+
+# Бустеры для групп
+boosters: # нужен плагин Vault для этого
+  default: 1.0
+  vip: 1.2
+  premium: 1.4
+
+# Настройка руд
+# Эта категория была сгенерирована нейросетью
+# Если Вы не нашли тут какую нибудь руду
+# Вы можете самостоятельно по аналогии её добавить.
+
+# Можно установить диапазон суммы начисления денег
+# Например: earn: 5-10
+# Будет рандомно даваться от 5 до 10
+# Можно оставить и статично число 10.
+ores:
+  coal_ore:
+    name: "угольной руды"
+    earn: "1-3"
+  iron_ore:
+    name: "железной руды"
+    earn: "3-6"
+  gold_ore:
+    name: "золотой руды"
+    earn: "8-15"
+  diamond_ore:
+    name: "алмазной руды"
+    earn: "20-35"
+  emerald_ore:
+    name: "изумрудной руды"
+    earn: "25-45"
+  redstone_ore:
+    name: "красной руды"
+    earn: "2-5"
+  lapis_ore:
+    name: "лазуритовой руды"
+    earn: "3-7"
+  copper_ore:
+    name: "медной руды"
+    earn: "1-2"
+  # Глубинные руды (1.17+)
+  deepslate_coal_ore:
+    name: "глубинной угольной руды"
+    earn: "2-4"
+  deepslate_iron_ore:
+    name: "глубинной железной руды"
+    earn: "4-8"
+  deepslate_gold_ore:
+    name: "глубинной золотой руды"
+    earn: "10-18"
+  deepslate_diamond_ore:
+    name: "глубинной алмазной руды"
+    earn: "25-40"
+  deepslate_emerald_ore:
+    name: "глубинной изумрудной руды"
+    earn: "30-50"
+  deepslate_redstone_ore:
+    name: "глубинной красной руды"
+    earn: "3-6"
+  deepslate_lapis_ore:
+    name: "глубинной лазуритовой руды"
+    earn: "4-8"
+  deepslate_copper_ore:
+    name: "глубинной медной руды"
+    earn: "2-3"
+  # Незерские руды
+  nether_gold_ore:
+    name: "незерской золотой руды"
+    earn: "5-10"
+  nether_quartz_ore:
+    name: "кварцевой руды"
+    earn: "2-4"
+  ancient_debris:
+    name: "древних обломков"
+    earn: "100-200"

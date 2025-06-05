@@ -1,0 +1,5 @@
+ru\normalwalk\normaloresearn\Utils\Coloriser.class
+ru\normalwalk\normaloresearn\Listener\OreEarnListener.class
+ru\normalwalk\normaloresearn\Main.class
+ru\normalwalk\normaloresearn\Command\ReloadCommand.class
+ru\normalwalk\normaloresearn\Utils\VaultUtils.class
